@@ -192,6 +192,29 @@ getUser = async (req ,res)=>{
 >>>>>>> d4dd62a93735b3279b6dfba5ed04dbb5645306bd
 
 
+
+
+    getUser = async (req ,res)=>{
+
+      const {id, role} = req;
+    
+      try {
+    
+        if(role === 'admin'){
+          const user = await adminModel.findById(id)
+          responseReturn(res, 200, {userInfo : user})
+    
+        }else{
+    
+          console.log('Seller Info')
+        }
+    
+      } catch (error) {
+    
+        console.log(error.message)
+      }
+    
+}
 }
 
 module.exports = new authControllers()

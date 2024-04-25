@@ -12,6 +12,8 @@ router.post('/seller-register',authControllers.seller_register)
 
 router.post('/seller-login',authControllers.seller_login)
 
+router.get('/get-user',authMiddleware, authControllers.getUser)
+
 
 >>>>>>> d4dd62a93735b3279b6dfba5ed04dbb5645306bd
 
