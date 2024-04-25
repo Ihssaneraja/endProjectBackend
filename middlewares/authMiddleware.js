@@ -18,7 +18,7 @@ module.exports.authMiddleware = async(req,res, next)=>{
             next()
             
         } catch (error) {
-            return res.status(409).json({ error:'Please Login First '})
+            return res.status(409).json({ error:'Please Login '})
         }
 
     }
